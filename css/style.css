@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-position:center ;
+    background-size: 50vw 50vw ;
+    background-image: url(https://greenpng.com/wp-content/uploads/2020/06/publicdomainq-0036474puuenb.png);
+}
+@keyframes moveFish {
+0% { left: 0; transform: scaleX(1); } /* Início da animação, posição inicial sem espelhar */
+100% { left: 100%; transform: scaleX(1); } /* Fim da animação, posição final sem espelhar */
+}
+
+
+@keyframes tremble {
+    0%, 100% { transform: translate(-2px, -2px) rotate(-1deg); }
+    25% { transform: translate(2px, 2px) rotate(1deg); }
+    75% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+}
+.date {
+    border-radius: 17px;
+    background-color: rgba(15, 99, 167, 0.699);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 80px;
+    color: #fff;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.623);
+    position: absolute;
+}
+.background {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.background img {
+    position: absolute;
+    top: 50%; /* Ajusta a posição verticalmente */
+    left: 0; /* Inicia da esquerda */
+    transform: translateY(-50%); /* Largura da imagem do peixe */
+    animation: moveFish 20s linear infinite, tremble 0.1s linear infinite; /* Aplica ambas as animações */
+}
+.clock {
+    border-radius: 17px;
+    background-color: rgba(15, 99, 167, 0.699);
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 111px;
+    color: #fff;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.623);
+}
